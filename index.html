@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>لمحة عن أبي ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Lateef&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #fff8f0 0%, #f9eee6 100%);
+      font-family: 'Amiri', serif;
+      color: #4b3e2f;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1rem 4rem;
+      text-align: center;
+      user-select: none;
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 3.6rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+      text-shadow: 0 0 6px #e6cfc5;
+      white-space: nowrap;
+    }
+    p.subheading {
+      font-family: 'Lateef', cursive;
+      font-size: 1.7rem;
+      margin-bottom: 3rem;
+      color: #7b5e53;
+      font-weight: 600;
+      max-width: 700px;
+      line-height: 1.3;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 3rem 2.5rem;
+      width: 100%;
+      max-width: 960px;
+      padding: 0 1rem;
+    }
+    .card {
+      background: #e8d7c3;
+      border-radius: 28px;
+      padding: 3.5rem 2rem 4rem;
+      box-shadow: 0 6px 30px rgba(120, 90, 50, 0.25);
+      cursor: pointer;
+      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #4b3e2f;
+    }
+    .card:hover, .card:focus {
+      transform: translateY(-15px) scale(1.08);
+      box-shadow: 0 20px 60px rgba(120, 90, 50, 0.40);
+      outline: none;
+    }
+    .card:focus-visible {
+      outline: 3px solid #c97e7e;
+      outline-offset: 5px;
+    }
+    .icon {
+      font-size: 7rem;
+      margin-bottom: 1.4rem;
+      animation: gentleFloat 5s ease-in-out infinite alternate;
+      filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.14));
+      line-height: 1;
+    }
+    .photo-float {
+      width: 6.5rem;
+      height: 6.5rem;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.4rem;
+      animation: gentleFloat 5s ease-in-out infinite alternate;
+      filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.14));
+    }
+    @keyframes gentleFloat {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-15px); }
+    }
+    .title {
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 0.5rem;
+      line-height: 1.15;
+      white-space: nowrap;
+    }
+    .desc {
+      font-family: 'Lateef', cursive;
+      font-size: 1.25rem;
+      color: #7b5e53;
+      max-width: 260px;
+      line-height: 1.5;
+    }
+    footer {
+      margin-top: 5rem;
+      font-size: 1rem;
+      color: #a08c7f;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+  </style>
+</head>
+<body>
+  <h1>عظمة تمشي بيننا</h1>
+  <p class="subheading">صفحات من الفخر، خُطّت بقلب ابنته</p>
+
+  <div class="grid" role="list" aria-label="أقسام الصفحة">
+    <!-- Card with floating photo (dad-float.jpg) -->
+    <div class="card" role="listitem" tabindex="0" onclick="location.href='dad.html'" onkeypress="if(event.key==='Enter') location.href='dad.html';">
+      <img src="dad-float.jpg" class="photo-float" />
+      <div class="title">أبي… سر العظمة</div>
+      <div class="desc">حين يتجسد الوقار في رجل، ويصبح القدوة نبضًا في كل تفاصيل الحياة.</div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card" role="listitem" tabindex="0" onclick="location.href='unforgetfulmoments.html'" onkeypress="if(event.key==='Enter') location.href='unforgetfulmoments.html';">
+      <div class="icon" aria-hidden="true">🎞️</div>
+      <div class="title">مشاهد من القلب</div>
+      <div class="desc">بعض الذكريات نُقشت في القلب ولن تُنسى.</div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card" role="listitem" tabindex="0" onclick="location.href='minigifts.html'" onkeypress="if(event.key==='Enter') location.href='minigifts.html';">
+      <div class="icon" aria-hidden="true">🎁</div>
+      <div class="title">هدايا صغيرة</div>
+      <div class="desc">كلمات بسيطة، لكنها محمّلة بأوزان من الدفء والمشاعر.</div>
+    </div>
+
+    <!-- Card 4: دعاء من القلب with floating photo instead of emoji -->
+<div class="card" role="listitem" tabindex="0" onclick="location.href='dua.html'" onkeypress="if(event.key==='Enter') location.href='dua.html';">
+  <img src="baba-dua-float.jpg" class="photo-float" alt="دعاء من القلب" />
+  <div class="title">دعاء من القلب</div>
+  <div class="desc">من القلب إلى السماء، دعاء يُشبهه، ويليق بروحه العظيمة.</div>
+</div>
+
+
+  <footer>
+    تصميم بشغف | &copy; 2025
+  </footer>
+</body>
+</html>
