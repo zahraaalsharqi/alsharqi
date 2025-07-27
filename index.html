@@ -111,10 +111,14 @@
   color: #a08c7f;
   font-weight: 600;
   letter-spacing: 0.06em;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  direction: ltr; /* ✅ force it to treat the line left-to-right for centering */
+  text-align: center;
+  direction: rtl; /* still keep Arabic natural */
 }
+
   </style>
 </head>
 <body>
@@ -154,5 +158,6 @@
  <footer>
   صُمم بشغف <span style="margin: 0 0.5rem;">|</span> &copy; 2025
 </footer>
+
 </body>
 </html>
