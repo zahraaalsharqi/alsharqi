@@ -11,6 +11,7 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
+   
     body {
       margin: 0;
       background: linear-gradient(135deg, #fff8f0 0%, #f9eee6 100%);
@@ -19,11 +20,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 3rem 1rem 4rem;
+     padding: 2rem 1rem;
       text-align: center;
       user-select: none;
       min-height: 100vh;
+       max-width: 100%;
+  overflow-x: hidden;
     }
+   
     h1 {
       font-size: 3.6rem;
       font-weight: 900;
@@ -32,6 +36,7 @@
       text-shadow: 0 0 6px #e6cfc5;
       white-space: nowrap;
     }
+  
     p.subheading {
       font-family: 'Lateef', cursive;
       font-size: 1.7rem;
@@ -41,15 +46,42 @@
       max-width: 700px;
       line-height: 1.3;
     }
+  
     .grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, auto);
       gap: 3rem 2.5rem;
       width: 100%;
-      max-width: 960px;
+      max-width: 600px;
       padding: 0 1rem;
     }
+  
+    @media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+    gap: 2rem;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  p.subheading {
+    font-size: 1.4rem;
+  }
+  .card {
+    padding: 2.5rem 1rem 3rem;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .desc {
+    font-size: 1.1rem;
+  }
+  footer {
+    font-size: 0.9rem;
+  }
+}
+  
     .card {
       background: #e8d7c3;
       border-radius: 28px;
@@ -62,15 +94,18 @@
       align-items: center;
       color: #4b3e2f;
     }
+  
     .card:hover, .card:focus {
       transform: translateY(-15px) scale(1.08);
       box-shadow: 0 20px 60px rgba(120, 90, 50, 0.40);
       outline: none;
     }
+   
     .card:focus-visible {
       outline: 3px solid #c97e7e;
       outline-offset: 5px;
     }
+   
     .icon {
       font-size: 7rem;
       margin-bottom: 1.4rem;
@@ -78,6 +113,7 @@
       filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.14));
       line-height: 1;
     }
+  
     .photo-float {
       width: 6.5rem;
       height: 6.5rem;
@@ -87,24 +123,32 @@
       animation: gentleFloat 5s ease-in-out infinite alternate;
       filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.14));
     }
+  
     @keyframes gentleFloat {
       0% { transform: translateY(0); }
       100% { transform: translateY(-15px); }
     }
+   
     .title {
       font-size: 2rem;
       font-weight: 900;
       margin-bottom: 0.5rem;
       line-height: 1.15;
       white-space: nowrap;
+       word-break: break-word;
+  text-align: center;
     }
+
     .desc {
       font-family: 'Lateef', cursive;
       font-size: 1.25rem;
       color: #7b5e53;
       max-width: 260px;
       line-height: 1.5;
+       word-break: break-word;
+  text-align: center;
     }
+
     footer {
   margin-top: 5rem;
   font-size: 1rem;
@@ -116,9 +160,11 @@
   align-items: center;
   width: 100%;
   text-align: center;
-  direction: rtl; /* still keep Arabic natural */
+  direction: rtl; 
+  flex-wrap: wrap;
+  text-align: center;
 }
-
+    
   </style>
 </head>
 <body>
